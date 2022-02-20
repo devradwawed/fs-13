@@ -1,0 +1,109 @@
+/* =================puplic style================ */
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+/* start navber */
+nav{
+  background-color: #f7f7f7;
+  padding: 20px 0;
+}
+.title{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.title h2{
+  color: #fff;
+  font-size: 40px; 
+}
+
+
+
+.title  hr{
+  width: 5%;
+  margin: 10px auto;
+  height: 2px;
+  background: #fff;
+  border: 0;
+}
+
+nav .container .brand{
+  display: inline-block;
+  width: 17%;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #282828;
+  letter-spacing: 1.1px;
+}
+nav .container .nav-list{
+  display: inline-block;
+  width: 80%;
+  text-align: right;
+}
+nav .nav-list .list-item{
+  display: inline;
+  margin: 0 15px;
+}
+nav .nav-list .list-item a{
+  font-weight: 500;
+  color: #282828;
+}
+
+/* end navber */
+/* =========start need ============*/
+.need{
+  background-color: rgb(153, 79, 53);
+  padding: 100px 0;
+}
+.need .box{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.need .box p{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.need .box .btn{
+  padding: 12px 42px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 0;
+}
+/* =========end need ============*/
+
+/* start service */
+.service{
+  background-color:#f7f7f7;
+  padding: 100px 0;
+}
+.service .title h2 {
+  color: #282828;
+}
+
+.service .title hr {
+  background-color: #282828;
+}
+.service .parent .child{
+  display: inline-block;
+  width: 20%;
+  margin: 0 23px;
+  text-align: center;
+}
+/* end service */
