@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --font-Two: 'Oswald', sans-serif;
+  --bgColor:#ffc400;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  background-color:rgb(212, 213, 214);
+}
+.container{
+  width: 85%;
+  margin: auto;
+}
+.row{
+  display: flex;
+}
+@media (max-width:991px) {
+  .container{
+    width: 95%;
+  }
+}
+/* start  topber */
+
+.topber{
+  background-color: #fff;
+  padding: .4rem;
+  border-bottom: 1px solid #eee;
+}
+.topber .row{
+  justify-content: space-between;
+  align-items: center;
+}
+.topber p{
+  color: #888;
+  font-size:0.875rem;
+}
+.topber .topber-left{
+
+}
+.topber .topber-right{
+  display: flex;
+  justify-content: space-between;
+  width: 46%;
+}
+.topber .topber-right .icon-social a{
+  border-left: 1px solid #eee;
+  padding: 0.6rem;
+}
+.topber .topber-right .icon-social a:last-of-type{
+  border-right: 1px solid #eee;
+}
+
+@media (min-width:769px) and (max-width:1200px){
+  .topber .topber-left {
+    display: none;
+  }
+  .topber .topber-right{
+    width: 100%;
+  }
+}
+@media (max-width:768px) {
+  .topber{
+    display: none;
+  }
+}
+
+/* ===============start navber */
+nav{
+  background-color: #fff;
+  padding: 0.4rem 0;
+}
+nav .row{
+  justify-content: space-between;
+  align-items: center;
+}
+nav .brand{
+  width: 20%;
+}
+nav .nav-list .nav-item{
+  margin-left: 3rem;
+  position: relative;
+}
+nav .nav-list .nav-item::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--bgColor);
+  top: -100%;
+  left: 0;
+  transition: all .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  -moz-transition: all .4s ease-in;
+  -ms-transition: all .4s ease-in;
+  -o-transition: all .4s ease-in;
+}
+nav .nav-list .nav-item:hover::before , 
+nav .nav-list .nav-item.active::before
+{
+  width: 100%;
+}
+
+nav .nav-list .nav-item a{
+  color: #777575;
+  font-family: var(--font-Two);
+}
+nav .nav-list .nav-item.active a{
+  color: #282828;
+}
+nav .nav-list .nav-item:hover a{
+  color: #282828;
+}
+nav #inp , nav label{
+  display: none
+}
+
+
+@media (max-width:1000px) {
+  nav{
+    overflow: hidden;
+  }
+  nav .row{
+    flex-wrap: wrap;
+  }
+  nav label{
+    display: block;
+  }
+  nav .nav-list{
+    width: 100%;
+    display: block;
+}
+  nav #inp:checked + .nav-list{
+    display: none;
+  }
+  nav .nav-list .nav-item::before{
+    position: unset;
+  }
+  nav .nav-list .nav-item {
+    margin-left: 0;
+    padding: 0.5rem 0;
+}
+}
+
+/* ===============end navber */
