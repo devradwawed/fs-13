@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  background-color: rgb(160, 156, 156);
+}
+:root{
+  --bgHeader:#f0f0f2;
+  --colorText:#141517;
+  --colorLinkDropdown:#0b1c39;
+  --bgVideo:#02050c80;
+  --hoverText:#ff2020;
+  --bgBefor:#ff003c;
+  --fontTow:'Josefin Sans', sans-serif;
+}
+.container{
+  width: 85%;
+  margin: auto;
+}
+.container-fluid{
+  width: 100%;
+  padding: 0 15px;
+}
+.row{
+  display: flex;
+}
+
+/* ===============start header ================  */
+.header-area{
+  background-color:#fff;
+}
+.header-area .row{
+  justify-content: space-between;
+  align-items: center;
+}
+.header-area .row nav .nav-list .nav-item{
+  display: inline-block;
+  position: relative;
+}
+.header-area .row nav .nav-list .nav-item:nth-child(4)::before{
+  content: "hot";
+  position: absolute;
+  font-size: 0.625rem;
+  background-color: var(--bgBefor);
+  padding: 3px 8px;
+  top: 15%;
+  right: -15%;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-weight: 500;
+}
+.header-area .row nav .nav-list .nav-item .nav-link{
+  padding: 41px 21px;
+  display: block;
+  font-family: var(--fontTow);
+  color: var(--colorText);
+  text-transform: capitalize;
+  transition:all .1s ease-in;
+  -webkit-transition:all .1s ease-in;
+  -moz-transition:all .1s ease-in;
+  -ms-transition:all .1s ease-in;
+  -o-transition:all .1s ease-in;
+}
+.header-area .row nav .nav-list .nav-item .submenu{
+  position: absolute;
+  background: #fff;
+  width: 170px;
+  padding: 17px 15px;
+  border-top: 3px solid var(--hoverText);
+  box-shadow: 0 0 10px 3px rgb(0 0 0 / 5%);
+  border-radius: 7px 7px 3px 3px;
+  -webkit-border-radius: 7px 7px 3px 3px;
+  -moz-border-radius: 7px 7px 3px 3px;
+  -ms-border-radius: 7px 7px 3px 3px;
+  -o-border-radius: 7px 7px 3px 3px;
+  top: 90%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.header-area .row nav .nav-list .nav-item:hover .submenu{
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+.header-area .row nav .nav-list .nav-item .submenu::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 6px;
+  border-color: transparent transparent var(--hoverText) transparent;
+  border-style: solid;
+  top: -15%;
+}
+.header-area .row nav .nav-list .nav-item .submenu .sub-item .sub-link{
+  padding: 6px 10px;
+  display: block;
+  color: var(--colorLinkDropdown);
+}
+.header-area .row nav .nav-list .nav-item:hover .nav-link{
+  color:var(--hoverText);
+
+}
+.header-area .row .icon-social li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.header-area .row .icon-social li a{
+  color:var(--colorText);
+}
+/* ===============end header ================  */
